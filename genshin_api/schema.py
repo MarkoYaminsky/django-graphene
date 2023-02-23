@@ -1,12 +1,12 @@
 import graphene
-import user.schema as us
+from user import queries as uq, mutations as um
 
 
-class Query(us.UserQuery):
+class Query(uq.UserQuery):
     pass
 
 
-class Mutation(us.UserMutation, graphene.ObjectType):
+class Mutation(um.UserMutation, graphene.ObjectType):
     pass
 
 
